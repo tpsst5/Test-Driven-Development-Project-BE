@@ -31,6 +31,10 @@ To see if your project matches the functionality expected, run the tests using t
 
 - After you have glanced over the tutorial, start looking into some functionality to write! Each component has tests written so that you can focus on one component at a time.
 
+- Remember a simple concept, you are trying to implement functionality that matches the expected behavior provided by the unit tests! So examine the tests carefully; each test is begins with the `@Test` annotation. This will provide clues as to which methods to implement for each component and how each of the components should behave.
+
+- A suggested order of implementation would be the model, service, then the controller.
+
 - To only run tests on one component, right click on the specific test file and choose the Run option.
 
 - If you did everything correctly, you should have 11 passing tests at the end.
