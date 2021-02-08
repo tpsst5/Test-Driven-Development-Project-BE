@@ -13,14 +13,14 @@ This project is a web service that allows a user to perform basic HTTP requests.
 
 ### To begin:
 
-You will first need IntelliJ ultimate edition. Spring Boot will not work with the community edition. Make sure you are using Java 8. After this, import all of the maven dependencies and right click on the java folder under the test folder to see the Run All Tests option.
+You will first need [IntelliJ ultimate edition](https://www.jetbrains.com/idea/download/#section=windows). Spring Boot will not work with the community edition. Make sure you are using Java 8. After this, import all of the maven dependencies and right click on the java folder under the test folder to see the Run All Tests option.
 This command will start executing all of the unit tests in the backend and they will fail until you implement the right functionality. 
 
 ---
 
 ### To develop:
 
-To see what your code currently does, run the TddTutorialApplication and see if you are able to hit the web service on port 8080 with a tool like postman.
+To see what your code currently does, run the TddTutorialApplication and see if you are able to hit the web service on port 8080 with a tool like [Postman](https://www.postman.com/downloads/).
 To see if your project matches the functionality expected, run the tests using the Run All Tests option.
 
 ---
@@ -28,6 +28,8 @@ To see if your project matches the functionality expected, run the tests using t
 ### Don't know where to begin?
 
 - If this is your first time using Spring Boot, you should start by reading the documentation [Spring Boot Reference Documentation](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/).
+
+- A lengthy, but insightful Spring Boot tutorial can be found [here](https://www.youtube.com/watch?v=msXL2oDexqw)
 
 - After you have glanced over the tutorial, start looking into some functionality to write! Each component has tests written so that you can focus on one component at a time.
 
