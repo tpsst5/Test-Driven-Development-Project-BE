@@ -21,11 +21,7 @@ public class Book {
      * Create instance of Book object.
      **/
     public Book() {
-        id = 0;
-        title = "";
-        author = "";
-        genre = "";
-        publisher = "";
+        this.id = 0;
     }
 
     /**
@@ -33,7 +29,7 @@ public class Book {
      * @param idInput of Book
      **/
     public void setId(int idInput) {
-        id = idInput;
+        this.id = idInput;
     }
 
     /**
@@ -41,7 +37,7 @@ public class Book {
      * @return int of id
      **/
     public int getId() {
-        return id;
+        return this.id;
     }
 
     /**
@@ -57,7 +53,7 @@ public class Book {
      * @return String of title
      **/
     public String getTitle() {
-        return title;
+        return this.title;
     }
 
     /**
@@ -73,7 +69,7 @@ public class Book {
      * @return String of author
      **/
     public String getAuthor() {
-        return author;
+        return this.author;
     }
 
     /**
@@ -89,7 +85,7 @@ public class Book {
      * @return String of genre
      **/
     public String getGenre() {
-        return genre;
+        return this.genre;
     }
 
     /**
@@ -105,6 +101,6 @@ public class Book {
      * @return String of publisher
      **/
     public String getPublisher() {
-        return publisher;
+        return this.publisher;
     }
 }

@@ -51,6 +51,7 @@ public class BookServiceTest {
         List<Book> books = new ArrayList<>();
 
         book.setId(12345);
+        bookService.saveBook(book);
         books.add(book);
         
         Mockito.when(bookRepository.findAll()).thenReturn(books);
