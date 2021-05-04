@@ -3,6 +3,7 @@ package com.TDDTutorial.model;
 import lombok.Data;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 
 /**
  * Internship Pre-work - Book.java
@@ -14,6 +15,7 @@ import javax.persistence.Entity;
 @Entity
 public class Book {
     // Instance variables
+    @Id
     private int id;
     private String title, author, genre, publisher;
 

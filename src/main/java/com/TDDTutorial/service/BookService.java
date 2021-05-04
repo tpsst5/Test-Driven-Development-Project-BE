@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.List;
 
 @Service
 public class BookService {
@@ -13,21 +14,15 @@ public class BookService {
     // Instance variables
     @Autowired
     private BookRepository bookRepository;
-    private ArrayList<Book> booksList;
-
-    /**
-     * Constructor for BookService instance.
-     */
-    public BookService() {
-        booksList = new ArrayList<>();
-    }
 
     /**
      * Getter for booksList.
      * @return Iterable<Book> of books
      **/
     public Iterable<Book> getAllBooks() {
-        return booksList;
+        List<Book> books = new ArrayList<Book>();
+        bookRepository.findAll().forEach(book -> books.add(book));
+        return books;
     }
 
     /**
@@ -36,13 +31,7 @@ public class BookService {
      * @return Book object that matches id
      */
     public Book getBookById(int id) {
-        Book match = null;
-        for (Book book: booksList) {
-            if (book.getId() == id) {
-                match = book;
-            }
-        }
-        return match;
+        return bookRepository.findById(id).get();
     }
 
     /**
@@ -51,7 +40,7 @@ public class BookService {
      * @return String 'Successful Save'
      **/
     public String saveBook(Book book) {
-        booksList.add(book);
+        bookRepository.save(book);
         return "Successful Save";
     }
 
@@ -61,11 +50,7 @@ public class BookService {
      * @return String 'Successful Delete'
      **/
     public String deleteBook(int id) {
-        for (int i = 0; i < booksList.size(); i++) {
-            if (booksList.get(i).getId() == id) {
-                booksList.remove(i);
-            }
-        }
+        bookRepository.deleteById(id);
         return "Successful Delete";
     }
 

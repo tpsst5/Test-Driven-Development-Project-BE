@@ -1,3 +1,4 @@
+
 package com.TDDTutorial.service;
 
 import com.TDDTutorial.model.Book;
@@ -51,9 +52,8 @@ public class BookServiceTest {
         List<Book> books = new ArrayList<>();
 
         book.setId(12345);
-        bookService.saveBook(book);
         books.add(book);
-        
+
         Mockito.when(bookRepository.findAll()).thenReturn(books);
 
         Iterable<Book> actual = bookService.getAllBooks();
@@ -80,7 +80,7 @@ public class BookServiceTest {
         verify(bookRepository).save(book);
         Assert.assertEquals("Successful Save", response);
     }
-    
+
     @Test
     public void deleteBook() {
         int id = 123;
